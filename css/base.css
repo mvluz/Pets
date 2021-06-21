@@ -1,0 +1,29 @@
+html{
+    font-size: 62.5%; 
+    /*   font-size: 62,5%; 
+    10px(valor quer usar) / 16px (valor padrão navegador) * 100 = 62,5%(valor proporcional
+    de 10px para 100% que é 16px). Assim, fica mais facil o calcular proporcional
+    de REM para os componetes filhos, onde 28px é 2.8rem (28px/10px=2,8rem) e assim em 
+    adiante para os netos EM/REM.  
+ 
+        font-size: 100%;
+    substitui os 10px fixados pelo bootstrap 
+    deixando fonte padrão 16px do navegador e aumentando 
+    proporcionalmente com a configuração de aumento de fonte do 
+    navegador, porém deixa o calculo da unidade EM difícel*/
+  }
+ 
+  body {
+   /* Posicionamento */
+ 
+   /* Display e Box Model */  
+   margin: 0;
+ 
+   /* Cores */
+ 
+   /* Texto */
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 1.4rem;
+ 
+   /* Outros */
+   }
