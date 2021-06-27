@@ -1,8 +1,10 @@
-function resetClick(id){
-    let element = document.getElementById(id);
-    element.style.color='black';
+function ageByDogBirth(value){
+
+    let dogAge = year() - value;
+    let element =  document.getElementById("dog-age") 
+    element.value= dogAge;
 }
-function calculate() {
+function dogAgeHuman() {
     let age = parseFloat(document.getElementById("dog-age").value);
     let porte = parseInt(document.getElementById("porte").value);
     let result, restAge, greaterThanTwo;
@@ -60,6 +62,6 @@ function calculate() {
         }
     }
 
-    document.getElementById("resultado").value = String(result).replace(".",",") + " Anos.";
+    document.getElementById("resultado").value = String(result).replace(".",",") + " Anos humanos.";
     
 }
