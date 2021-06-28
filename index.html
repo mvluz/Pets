@@ -19,8 +19,10 @@
         <div class="container">
 
             <nav class="navegacao">
-                <a href=#><img src="img/22214-dog-face-iconx64.png" width="64" height="64" alt="logo" /></a>
-                <a href=#><img src="img/calculator2-iconx64.png" width="64" height="64" alt="logo" /></a>
+                <a href=#><img src="img/22214-dog-face-iconx64.png" width="64" height="64"
+                        alt="Ícone de Cachorro" /></a>
+                <a href=#><img src="img/calculator2-iconx64.png" width="64" height="64"
+                        alt="Ícone de Calculadora" /></a>
             </nav>
 
         </div>
@@ -28,76 +30,120 @@
 
     <main class="layout">
         <div class="container">
+            <div class="row">
 
-            <form action="" id="form-calc" method="post">
-                <h1 class="titulo-formulario">Calculadora de Idade Canina</h1>
+                <div class="col-sm-4">
 
-                <fieldset>
-                    <legend>Para saber a idade em anos, informe o ano de nascimento</legend>
-                    <div class="row" style="text-align: left; margin: 20px;">
-                        <div class="col-sm-2">
+                    <form action="" id="form-calc" method="post">
+                        <h1 class="titulo-formulario">Calculadora de Idade Canina</h1>
+
+                        <fieldset>
+                            <legend>Para saber a idade em anos: </legend>
+
                             <div class="grupo-entrada">
-                                <label for="dog-age">Ano de Nascimento</label>
+                                <label for="dog-age">Informe o ano de nascimento</label>
                                 <input type="number" id="dog-birth" name="dog-birth" class="campo"
                                     placeholder="Exemplo: 2010" onchange="ageByDogBirth(value)"
                                     onkeyup="ageByDogBirth(value)">
-                            </div>
-                        </div>
-                    </div>
-                </fieldset>
 
-                <fieldset>
-                    <legend>Calculadora</legend>
-                    <div class="row" style="text-align: left; margin: 20px;">
-                        <div class="col-sm-2">
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Calculadora</legend>
+
                             <div class="grupo-entrada">
-                                <label for="porte">* Tamanho</label><br>
+                                <label for="porte">* Tamanho</label>
                                 <select id="porte" class="campo" onclick=resetColor(id)>
-                                    <option> ---------------------- Selecione ---------------------- </option>
-                                    <option value="1">Pequeno (Mini e P - 0,5 a 15 Kilos - Altura Máx. 43 cm)</option>
-                                    <option value="2">Médio (15 a 25 Kilos - Altura Máx. 60 cm)</option>
-                                    <option value="3">Grande (G e XG - 25 a 90 Kilos - Altura Máx. 70+ cm)</option>
+                                    <option>Selecione</option>
+                                    <option value="1">Pequeno</option>
+                                    <option value="2">Médio</option>
+                                    <option value="3">Grande</option>
                                 </select>
                             </div>
-                        </div>
-                    </div>
 
-                    <div class="row" style="text-align: left; margin: 20px;">
-                        <div class="col-sm-2">
                             <div class="grupo-entrada">
                                 <label for="dog-age">* Idade em Anos</label>
                                 <input type="number" id="dog-age" name="dog-age" class="campo" placeholder="Exemplo: 1"
-                                    required>
+                                    onclick=resetColor(id) required>
                             </div>
-                        </div>
-                    </div>
 
-                    <div class="row" style="text-align: left; margin: 20px;">
-                        <div class="col-sm-3">
-                            <input type="button" value="Calcular" class="botao" onClick="dogAgeHuman()">
-                        </div>
-                    </div>
-                </fieldset>
-                <fieldset>
-                    <legend>Resultado</legend>
-                    <div class="row" style="text-align: left; margin: 20px;">
-                        <div class="col-sm-3">
                             <div class="grupo-entrada">
-                                <input type="text" id="resultado" value="" disabled>
+                                <input type="button" value="Calcular" class="botao" onClick="dogAgeHuman()">
                             </div>
-                        </div>
-                    </div>
-                </fieldset>
-            </form>
+                        </fieldset>
 
+                        <fieldset>
+                            <legend>Resultado</legend>
 
+                            <div class="grupo-entrada">
+                                <input type="text" id="resultado" value="" disabled
+                                    style="border:0; background-color: white;color:black; font-size: 20px;">
+                            </div>
+                        </fieldset>
+                    </form>
 
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-4">
+                    <table>
+                        <caption>Fonte: https://www.dogsnet.com.br/ache-o-porte-do-seu-cachorro-srd</caption>
+                        <thead>
+                            <tr>
+                                <th>Tamanho</th>
+                                <th>Porte</th>
+                                <th>Peso – Kg</th>
+                                <th>Altura máxima</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td rowspan="2">Pequeno</td>
+                                <td>Mini</td>
+                                <td>0,5 a 6</td>
+                                <td>33 cm</td>
+                            </tr>
+                            <tr>
+
+                                <td>P</td>
+                                <td>6 a 15</td>
+                                <td>43 cm</td>
+                            </tr>
+                            <tr>
+                                <td>Médio</td>
+                                <td>M</td>
+                                <td>15 a 25</td>
+                                <td>60 cm</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">Grande</td>
+                                <td>G</td>
+                                <td>25 a 45</td>
+                                <td>70 cm</td>
+                            </tr>
+                            <tr>
+
+                                <td>XG</td>
+                                <td>45 a 90</td>
+                                <td>sem limite</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
     </main>
 
-    <footer class="layout-rodape">
+    <footer class="layout-rodape" style="text-align: left;">
         <div class="container">
-            <p>&copy; Dogs Age Calculator. Todos os direitos reservados.</p>
+                <span style="margin-left: 10px;"> Dogs Age Calculator. Todos os direitos reservados. &copy;
+                    <script>
+                        var currentYear = new Date().getFullYear()
+                        document.write(currentYear)
+                    </script>
+                </span>
         </div>
     </footer>
     <script src="js/calculations.js"></script>

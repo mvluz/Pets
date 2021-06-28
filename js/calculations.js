@@ -4,6 +4,7 @@ function ageByDogBirth(value){
     let element =  document.getElementById("dog-age") 
     element.value= dogAge;
 }
+// https://www.petz.com.br/blog/pets/idade-de-cachorro/
 function dogAgeHuman() {
     let age = parseFloat(document.getElementById("dog-age").value);
     let porte = parseInt(document.getElementById("porte").value);
@@ -11,6 +12,8 @@ function dogAgeHuman() {
 
     if (age <= 0 || isNaN(age) || age === "") {
         alert("Idade inválida. Informe um número positivo");
+        let element = document.getElementById("dog-age");
+        element.style.color='red';
         document.getElementById("dog-age").focus();
         return;
     }
